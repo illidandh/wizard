@@ -6,7 +6,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Button from './components/button';
 import Input from './components/input';
 
-export default class App extends React.Component {
+export default from '../storybook';
+
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
