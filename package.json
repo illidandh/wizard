@@ -30,6 +30,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-preset-react-native": "^5",
+    "detox": "^14.8.3",
     "eslint": "^6.5.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
@@ -41,5 +42,18 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/wizard.app",
+        "build": "xcodebuild -workspace ios/wizard.xcworkspace -scheme wizard -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 6s"
+        }
+      }
+    },
+    "test-runner": "jest"
   }
 }

@@ -6,9 +6,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Button from './components/button';
 import Input from './components/input';
 
-export default from '../storybook';
+// export default from '../storybook';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -101,6 +101,7 @@ class App extends React.Component {
               }
               isFail={isFailAddress1}
               value={address1}
+              testID="address1"
             />
             <Input
               title="Address Line 2"
@@ -110,6 +111,7 @@ class App extends React.Component {
               }
               isFail={isFailAddress2}
               value={address2}
+              testID="address2"
             />
             <View style={{flexDirection: 'row'}}>
               <View style={styles.root}>
@@ -121,6 +123,7 @@ class App extends React.Component {
                   }
                   isFail={isFailPostCode}
                   value={postCode}
+                  testID="code"
                 />
               </View>
               <View style={styles.root}>
@@ -132,6 +135,7 @@ class App extends React.Component {
                   }
                   isFail={isFailCity}
                   value={city}
+                  testID="city"
                 />
               </View>
             </View>
@@ -145,6 +149,7 @@ class App extends React.Component {
                   }
                   isFail={isFailState}
                   value={state}
+                  testID="state"
                 />
               </View>
               <View style={styles.root}>
@@ -275,6 +280,7 @@ class App extends React.Component {
         </View>
         <View style={styles.buttonView}>
           <Button
+            testID="next"
             sContainer={{
               backgroundColor:
                 step === 3 ? 'rgb(33, 186, 136)' : 'rgb(95, 124, 252)',
